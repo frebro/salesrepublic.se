@@ -1,0 +1,19 @@
+.brand {
+  position: relative;
+}
+
+.brand__logo {
+  vertical-align: middle;
+  opacity: 1;
+  transition: opacity var(--animation-duration) var(--animation-function);
+}
+
+.brand__logo--inverse {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.brand__logo--hide {
+  opacity: 0;
+}

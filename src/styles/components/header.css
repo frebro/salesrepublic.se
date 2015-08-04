@@ -1,0 +1,27 @@
+.header {
+  background-color: var(--color-lightgray);
+}
+
+.header__brand {
+  opacity: 0;
+  line-height: 100vh;
+  left: 0;
+  animation: brand-slide var(--animation-function) var(--animation-duration-slow) 3s forwards, brand-fade var(--animation-function) var(--animation-duration) 3s forwards, brand-collapse var(--animation-function) var(--animation-duration-slow) 6s forwards;
+  width: 360px;
+  max-width: 80%;
+}
+
+@keyframes brand-slide {
+  from { left: 0; }
+  to { left: 40px; }
+}
+
+@keyframes brand-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes brand-collapse {
+  from { line-height: 100vh; }
+  to { line-height: 24vh; }
+}

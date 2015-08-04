@@ -1,0 +1,147 @@
+:root { /* easeInOutCubic */
+}
+/* Foundation
+ * See: http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation
+ */
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  margin: 0;
+  font: 300 16px/1 'Whitney SSm A', 'Whitney SSm B', monospace;
+  background-color: white;
+  color: #30332D;
+}
+iframe {
+  border: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+ol,
+blockquote,
+figure,
+button {
+  margin: 0;
+  padding: 0;
+}
+main,
+li {
+  display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+strong {
+  font-weight: 500;
+}
+a,
+button {
+  color: inherit;
+  -webkit-transition: $global-transition-duration;
+          transition: $global-transition-duration;
+}
+a {
+  text-decoration: none;
+}
+button {
+  overflow: visible;
+  border: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  background: none;
+  cursor: pointer;
+  -webkit-font-smoothing: inherit;
+  &:focus {
+    outline: 0;
+  }
+}
+::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+.header {
+  background-color: #F3F6F2;
+}
+
+.header__brand {
+  opacity: 0;
+  line-height: 100vh;
+  left: 0;
+  -webkit-animation: brand-slide cubic-bezier(0.645, 0.045, 0.355, 1.000) 810ms 3s forwards, brand-fade cubic-bezier(0.645, 0.045, 0.355, 1.000) 270ms 3s forwards, brand-collapse cubic-bezier(0.645, 0.045, 0.355, 1.000) 810ms 6s forwards;
+          animation: brand-slide cubic-bezier(0.645, 0.045, 0.355, 1.000) 810ms 3s forwards, brand-fade cubic-bezier(0.645, 0.045, 0.355, 1.000) 270ms 3s forwards, brand-collapse cubic-bezier(0.645, 0.045, 0.355, 1.000) 810ms 6s forwards;
+  width: 360px;
+  max-width: 80%;
+}
+
+@-webkit-keyframes brand-slide {
+  from { left: 0; }
+  to { left: 40px; }
+}
+
+@keyframes brand-slide {
+  from { left: 0; }
+  to { left: 40px; }
+}
+
+@-webkit-keyframes brand-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes brand-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes brand-collapse {
+  from { line-height: 100vh; }
+  to { line-height: 24vh; }
+}
+
+@keyframes brand-collapse {
+  from { line-height: 100vh; }
+  to { line-height: 24vh; }
+}
+.brand {
+  position: relative;
+}
+
+.brand__logo {
+  vertical-align: middle;
+  opacity: 1;
+  -webkit-transition: opacity 270ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+          transition: opacity 270ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.brand__logo--inverse {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.brand__logo--hide {
+  opacity: 0;
+}
+.navbar {}

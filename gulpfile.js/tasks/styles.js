@@ -8,7 +8,6 @@ var browserSync     = require('browser-sync');
 
 gulp.task('styles', function () {
   return gulp.src(config.src)
-    .pipe(changed(config.dest))
     .pipe(postcss([
       postcssImport(),
       cssnext()
