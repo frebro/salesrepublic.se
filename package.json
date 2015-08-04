@@ -1,0 +1,36 @@
+{
+  "name": "salesrepublic.se",
+  "version": "0.1.0",
+  "description": "Website for Sales Republic.",
+  "homepage": "https://github.com/synackdigital/salesrepublic.se#readme",
+  "author": "Synack AB <hello@synack.se>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/synackdigital/salesrepublis.se.git"
+  },
+  "bugs": {
+    "url": "https://github.com/synackdigital/salesrepublis.se/issues"
+  },
+  "license": "ISC",
+  "engines": {
+    "node": "0.10.36",
+    "npm": "2.3.0"
+  },
+  "scripts": {
+    "test": "gulp build:production"
+  },
+  "devDependencies": {
+    "asset-builder": "^1.1.0",
+    "browser-sync": "^2.8.0",
+    "cssnext": "^1.8.2",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-postcss": "^5.1.9",
+    "gulp-sequence": "^0.4.0",
+    "gulp-uglify": "^1.2.0",
+    "gulp-watch": "^4.3.3",
+    "postcss-import": "^6.1.1",
+    "require-dir": "^0.3.0"
+  }
+}
