@@ -145,7 +145,7 @@ img {
     brand-fade cubic-bezier(0.645, 0.045, 0.355, 1.000) 240ms 720ms forwards;
           animation: brand-slide cubic-bezier(0.645, 0.045, 0.355, 1.000) 720ms 720ms forwards,
     brand-fade cubic-bezier(0.645, 0.045, 0.355, 1.000) 240ms 720ms forwards;
-  width: 300px;
+  width: 240px;
   max-width: 40vw;
   -webkit-transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
           transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
@@ -177,14 +177,14 @@ img {
   to { opacity: 1; }
 }
 .brand {
-  background-color: #640064;
-  background-color: rgba(100,0,100,.1);
   position: relative;
 }
 
 .brand__symbol {
   vertical-align: middle;
-  width: 24%;
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 5%;
   opacity: 1;
   -webkit-transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
           transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
@@ -192,8 +192,7 @@ img {
 
 .brand__wordmark {
   vertical-align: middle;
-  margin: 1% 0 0 3%;
-  width: 70%;
+  width: 100%;
   opacity: 1;
   -webkit-transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
           transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
@@ -220,7 +219,7 @@ img {
 }
 
 .brand__symbol .st2 {
-  fill: #94998F;
+  fill: rgba(48, 51, 45, 0.5);
 }
 
 
@@ -295,4 +294,14 @@ img {
   from { height: 3px; width: 0; }
   50% { height: 3px; width: 2em; }
   to { height: 1.6em; width: 2em; }
+}
+.banner {
+
+}
+
+.banner__brand {
+  display: block;
+  width: 480px;
+  max-width: 80%;
+  margin: 0 auto;
 }

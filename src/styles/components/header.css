@@ -7,7 +7,7 @@
   left: 0;
   animation: brand-slide var(--animation-function) var(--animation-duration-slow) 720ms forwards,
     brand-fade var(--animation-function) var(--animation-duration) 720ms forwards;
-  width: 300px;
+  width: 240px;
   max-width: 40vw;
   transition: all var(--animation-duration) var(--animation-function);
 }

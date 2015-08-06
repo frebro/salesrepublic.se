@@ -1,19 +1,19 @@
 .brand {
-  background-color: rgba(100,0,100,.1);
   position: relative;
 }
 
 .brand__symbol {
   vertical-align: middle;
-  width: 24%;
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 5%;
   opacity: 1;
   transition: all var(--animation-duration) var(--animation-function);
 }
 
 .brand__wordmark {
   vertical-align: middle;
-  margin: 1% 0 0 3%;
-  width: 70%;
+  width: 100%;
   opacity: 1;
   transition: all var(--animation-duration) var(--animation-function);
 }
@@ -38,7 +38,7 @@
 }
 
 .brand__symbol .st2 {
-  fill: var(--color-gray);
+  fill: color(var(--color-darkgray) a(50%));
 }
 
 
