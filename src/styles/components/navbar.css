@@ -1,1 +1,57 @@
 .navbar {}
+
+.navbar__hamburger {
+  border-top: 3px solid var(--color-darkgray);
+  border-bottom: 3px solid var(--color-darkgray);
+  color: transparent;
+  height: 3px;
+  width: 0;
+  line-height: 0;
+  overflow: hidden;
+  position: relative;
+  transition: all var(--animation-function) var(--animation-duration);
+  animation: hamburger-expand var(--animation-function) var(--animation-duration-slow) 3s forwards;
+}
+
+.navbar__hamburger:after {
+  background-color: var(--color-darkgray);
+  content: '';
+  display: block;
+  height: 3px;
+  transition: all var(--animation-function) var(--animation-duration);
+}
+
+/* Active state */
+.navbar__hamburger:hover,
+.navbar__hamburger:focus,
+.navbar__hamburger--active {
+  border-color: var(--color-blue);
+}
+.navbar__hamburger:hover:after,
+.navbar__hamburger:focus:after,
+.navbar__hamburger--active {
+  background-color: var(--color-blue);
+}
+
+/* Inverse colors */
+.navbar__hamburger--inverse {
+  border-color: var(--color-lightgray);
+}
+.navbar__hamburger--inverse:after {
+  background-color: var(--color-lightgray);
+}
+.navbar__hamburger--inverse:hover,
+.navbar__hamburger--inverse:focus {
+  border-color: var(--color-lightblue);
+}
+.navbar__hamburger--inverse:hover:after,
+.navbar__hamburger--inverse:focus:after {
+  background-color: var(--color-lightblue);
+}
+
+/* Animations */
+@keyframes hamburger-expand {
+  from { height: 3px; width: 0; }
+  50% { height: 3px; width: 2em; }
+  to { height: 1.6em; width: 2em; }
+}

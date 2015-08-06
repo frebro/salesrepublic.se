@@ -1,19 +1,51 @@
 .brand {
+  background-color: rgba(100,0,100,.1);
   position: relative;
 }
 
-.brand__logo {
+.brand__symbol {
   vertical-align: middle;
+  width: 24%;
   opacity: 1;
-  transition: opacity var(--animation-duration) var(--animation-function);
+  transition: all var(--animation-duration) var(--animation-function);
 }
 
-.brand__logo--inverse {
-  position: absolute;
-  top: 0;
-  left: 0;
+.brand__wordmark {
+  vertical-align: middle;
+  margin: 1% 0 0 3%;
+  width: 70%;
+  opacity: 1;
+  transition: all var(--animation-duration) var(--animation-function);
 }
 
-.brand__logo--hide {
-  opacity: 0;
+.brand .st0,
+.brand .st1,
+.brand .st2 {
+  transition: fill var(--animation-duration-slow) var(--animation-function);
+}
+
+
+/*
+ * Symbol SVG
+ */
+
+.brand__symbol .st0 {
+  fill: transparent; /* var(--color-lightyellow); */
+}
+
+.brand__symbol .st1 {
+  fill: var(--color-darkgray);
+}
+
+.brand__symbol .st2 {
+  fill: var(--color-gray);
+}
+
+
+/*
+ * Wordmark SVG
+ */
+
+.brand__wordmark .st0 {
+  fill: var(--color-darkgray);
 }

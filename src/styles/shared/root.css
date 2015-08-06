@@ -15,13 +15,16 @@
   --body-background:  white;
   --body-color:       var(--color-darkgray);
 
+  --body-padding-h:   30px;
+  --body-padding-v:   40px;
+
   --font-sans:    'Whitney SSm A', 'Whitney SSm B', monospace;
   --font-serif:   'Mercury SSm A', 'Mercury SSm B', monospace;
 
   --font-weight-normal:   300;
   --font-weight-bold:     500;
 
-  --animation-duration:       270ms;
-  --animation-duration-slow:  810ms;
+  --animation-duration:       240ms;
+  --animation-duration-slow:  720ms;
   --animation-function:       cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */
 }

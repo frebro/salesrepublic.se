@@ -1,0 +1,44 @@
+.background {
+  position: fixed;
+  z-index: -1;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  transition: all var(--animation-duration) var(--animation-function);
+}
+
+/* Color variations */
+.background--gray { background-color: var(--color-gray); }
+.background--lightgray { background-color: var(--color-lightgray); }
+.background--darkgray { background-color: var(--color-darkgray); }
+.background--blue { background-color: var(--color-blue); }
+.background--lightblue { background-color: var(--color-lightblue); }
+.background--darkblue { background-color: var(--color-darkblue); }
+.background--orange { background-color: var(--color-orange); }
+.background--lightorange { background-color: var(--color-lightorange); }
+.background--darkorange { background-color: var(--color-darkorange); }
+.background--yellow { background-color: var(--color-yellow); }
+.background--lightyellow { background-color: var(--color-lightyellow); }
+.background--darkyellow { background-color: var(--color-darkyellow); }
+
+/* Background image container */
+.background__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  opacity: 1;
+  transition: opacity var(--animation-duration) var(--animation-function);
+
+  background-position: center;
+  background-size: cover;
+}
+
+.background__image--hide {
+  opacity: 0;
+}

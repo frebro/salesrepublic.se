@@ -80,29 +80,91 @@ img {
   height: auto;
   border: 0;
 }
+/* Float clearfix */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
+.background {
+  position: fixed;
+  z-index: -1;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  -webkit-transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+
+          transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+/* Color variations */
+.background--gray { background-color: #94998F; }
+.background--lightgray { background-color: #F3F6F2; }
+.background--darkgray { background-color: #30332D; }
+.background--blue { background-color: #4882C3; }
+.background--lightblue { background-color: #D3E5EA; }
+.background--darkblue { background-color: #0F293A; }
+.background--orange { background-color: #D16041; }
+.background--lightorange { background-color: #EADBD6; }
+.background--darkorange { background-color: #EADBD6; }
+.background--yellow { background-color: #D1AA42; }
+.background--lightyellow { background-color: #E8E2C8; }
+.background--darkyellow { background-color: #302104; }
+
+/* Background image container */
+.background__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  opacity: 1;
+  -webkit-transition: opacity 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+          transition: opacity 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+
+  background-position: center;
+  background-size: cover;
+}
+
+.background__image--hide {
+  opacity: 0;
+}
 .header {
-  background-color: #F3F6F2;
+  padding: 40px 30px;
 }
 
 .header__brand {
   opacity: 0;
-  line-height: 100vh;
   left: 0;
-  -webkit-animation: brand-slide cubic-bezier(0.645, 0.045, 0.355, 1.000) 810ms 3s forwards, brand-fade cubic-bezier(0.645, 0.045, 0.355, 1.000) 270ms 3s forwards, brand-collapse cubic-bezier(0.645, 0.045, 0.355, 1.000) 810ms 6s forwards;
-          animation: brand-slide cubic-bezier(0.645, 0.045, 0.355, 1.000) 810ms 3s forwards, brand-fade cubic-bezier(0.645, 0.045, 0.355, 1.000) 270ms 3s forwards, brand-collapse cubic-bezier(0.645, 0.045, 0.355, 1.000) 810ms 6s forwards;
-  width: 360px;
-  max-width: 80%;
+  -webkit-animation: brand-slide cubic-bezier(0.645, 0.045, 0.355, 1.000) 720ms 720ms forwards,
+    brand-fade cubic-bezier(0.645, 0.045, 0.355, 1.000) 240ms 720ms forwards;
+          animation: brand-slide cubic-bezier(0.645, 0.045, 0.355, 1.000) 720ms 720ms forwards,
+    brand-fade cubic-bezier(0.645, 0.045, 0.355, 1.000) 240ms 720ms forwards;
+  width: 300px;
+  max-width: 40vw;
+  -webkit-transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+          transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.header__navbar {
+  position: absolute;
+  top: 40px;
+  right: 30px;
 }
 
 @-webkit-keyframes brand-slide {
-  from { left: 0; }
-  to { left: 40px; }
+  from { left: -300px; }
+  to { left: 0; }
 }
 
 @keyframes brand-slide {
-  from { left: 0; }
-  to { left: 40px; }
+  from { left: -300px; }
+  to { left: 0; }
 }
 
 @-webkit-keyframes brand-fade {
@@ -114,34 +176,123 @@ img {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
-@-webkit-keyframes brand-collapse {
-  from { line-height: 100vh; }
-  to { line-height: 24vh; }
-}
-
-@keyframes brand-collapse {
-  from { line-height: 100vh; }
-  to { line-height: 24vh; }
-}
 .brand {
+  background-color: #640064;
+  background-color: rgba(100,0,100,.1);
   position: relative;
 }
 
-.brand__logo {
+.brand__symbol {
   vertical-align: middle;
+  width: 24%;
   opacity: 1;
-  -webkit-transition: opacity 270ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
-          transition: opacity 270ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  -webkit-transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+          transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
 }
 
-.brand__logo--inverse {
-  position: absolute;
-  top: 0;
-  left: 0;
+.brand__wordmark {
+  vertical-align: middle;
+  margin: 1% 0 0 3%;
+  width: 70%;
+  opacity: 1;
+  -webkit-transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+          transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
 }
 
-.brand__logo--hide {
-  opacity: 0;
+.brand .st0,
+.brand .st1,
+.brand .st2 {
+  -webkit-transition: fill 720ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+          transition: fill 720ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+
+/*
+ * Symbol SVG
+ */
+
+.brand__symbol .st0 {
+  fill: transparent; /* var(--color-lightyellow); */
+}
+
+.brand__symbol .st1 {
+  fill: #30332D;
+}
+
+.brand__symbol .st2 {
+  fill: #94998F;
+}
+
+
+/*
+ * Wordmark SVG
+ */
+
+.brand__wordmark .st0 {
+  fill: #30332D;
 }
 .navbar {}
+
+.navbar__hamburger {
+  border-top: 3px solid #30332D;
+  border-bottom: 3px solid #30332D;
+  color: transparent;
+  height: 3px;
+  width: 0;
+  line-height: 0;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all cubic-bezier(0.645, 0.045, 0.355, 1.000) 240ms;
+          transition: all cubic-bezier(0.645, 0.045, 0.355, 1.000) 240ms;
+  -webkit-animation: hamburger-expand cubic-bezier(0.645, 0.045, 0.355, 1.000) 720ms 3s forwards;
+          animation: hamburger-expand cubic-bezier(0.645, 0.045, 0.355, 1.000) 720ms 3s forwards;
+}
+
+.navbar__hamburger:after {
+  background-color: #30332D;
+  content: '';
+  display: block;
+  height: 3px;
+  -webkit-transition: all cubic-bezier(0.645, 0.045, 0.355, 1.000) 240ms;
+          transition: all cubic-bezier(0.645, 0.045, 0.355, 1.000) 240ms;
+}
+
+/* Active state */
+.navbar__hamburger:hover,
+.navbar__hamburger:focus,
+.navbar__hamburger--active {
+  border-color: #4882C3;
+}
+.navbar__hamburger:hover:after,
+.navbar__hamburger:focus:after,
+.navbar__hamburger--active {
+  background-color: #4882C3;
+}
+
+/* Inverse colors */
+.navbar__hamburger--inverse {
+  border-color: #F3F6F2;
+}
+.navbar__hamburger--inverse:after {
+  background-color: #F3F6F2;
+}
+.navbar__hamburger--inverse:hover,
+.navbar__hamburger--inverse:focus {
+  border-color: #D3E5EA;
+}
+.navbar__hamburger--inverse:hover:after,
+.navbar__hamburger--inverse:focus:after {
+  background-color: #D3E5EA;
+}
+
+/* Animations */
+@-webkit-keyframes hamburger-expand {
+  from { height: 3px; width: 0; }
+  50% { height: 3px; width: 2em; }
+  to { height: 1.6em; width: 2em; }
+}
+@keyframes hamburger-expand {
+  from { height: 3px; width: 0; }
+  50% { height: 3px; width: 2em; }
+  to { height: 1.6em; width: 2em; }
+}
