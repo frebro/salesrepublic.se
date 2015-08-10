@@ -1,7 +1,7 @@
 .header {
   background-color: var(--color-lightblue);
   background-image: linear-gradient(170deg, color(var(--color-lightblue) a(10%)) 0%, color(var(--color-lightblue) a(3%)) 50%, color(var(--color-darkblue) a(10%)) 50%, color(var(--color-darkblue) a(3%)) 100%),
-    url('/images/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD-(1-of-1)-5.jpg');
+    url('../../images/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD-(1-of-1)-5.jpg');
   color: white;
   background-size: cover;
   background-position: bottom center;

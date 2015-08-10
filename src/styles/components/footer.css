@@ -1,7 +1,7 @@
 .footer {
   background-color: var(--color-gray);
   background-image: linear-gradient(190deg, color(var(--color-lightorange) a(10%)) 0%, color(var(--color-lightorange) a(3%)) 50%, color(var(--color-darkorange) a(10%)) 50%, color(var(--color-darkorange) a(3%)) 100%),
-    url('/images/photo-1428908728789-d2de25dbd4e2.jpg');
+    url('../../images/photo-1428908728789-d2de25dbd4e2.jpg');
   color: white;
   background-size: cover;
   background-position: bottom center;
