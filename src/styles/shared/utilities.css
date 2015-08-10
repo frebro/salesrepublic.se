@@ -4,3 +4,24 @@
   display: table;
   clear: both;
 }
+
+/* Font helpers */
+.font-sans { font-family: var(--sans-family); }
+.font-sans strong { font-weight: var(--sans-bold); }
+.font-serif { font-family: var(--serif-family); }
+.font-serif strong { font-weight: var(--serif-bold); }
+.font-s { font-size: var(--rem-s); }
+.font-l { font-size: var(--rem-l); }
+.font-xl { font-size: var(--rem-xl); }
+
+/* Magic underline */
+.magic-underline {
+  text-decoration: none !important;
+  display: inline-block;
+  background-image: linear-gradient(to top,
+    color(black a(0%)) 12%,
+    color(black a(15%)) 12%,
+    color(black a(15%)) 17%,
+    color(black a(0%)) 17%
+  );
+}

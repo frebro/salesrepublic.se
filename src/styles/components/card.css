@@ -1,0 +1,96 @@
+.card {
+  background-size: cover;
+  min-height: 100vh;
+}
+
+
+/*
+ * Card header
+ */
+
+.card__header {
+  position: relative;
+  margin-top: 1em;
+  padding-bottom: .5em;
+  font-size: var(--rem-xl);
+  font-family: var(--sans-family);
+  font-weight: var(--sans-bold);
+  line-height: 1.15;
+}
+
+.card__header:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1em;
+  height: 3px;
+  background-color: color(black a(80%));
+}
+
+
+/*
+ * Card content
+ */
+
+.card__content {
+  width: var(--content-width);
+  max-width: 90%;
+  padding: var(--content-padding-v) var(--content-padding-h);
+  margin: 0 auto;
+}
+.card__content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card__content--s { width: var(--content-width--s); }
+.card__content--l { width: var(--content-width--l); }
+
+
+/*
+ * Layout variations
+ */
+
+.card__content--centered { text-align: center; }
+.card__content--centered .card__header:before { left: 50%; margin-left: -.5em; }
+.card__content--bordered { border-top: 3px solid; }
+
+
+/*
+ * Color variations
+ */
+
+.card--orange a,
+.card--orange .card__header { color: var(--color-orange); }
+.card--orange .magic-underline {
+  background-image: linear-gradient(to top,
+    color(var(--color-orange) a(0%)) 12%,
+    color(var(--color-orange) a(15%)) 12%,
+    color(var(--color-orange) a(15%)) 17%,
+    color(var(--color-orange) a(0%)) 17%
+  );
+}
+
+.card--yellow a,
+.card--yellow .card__header { color: var(--color-yellow); }
+.card--yellow .magic-underline {
+  background-image: linear-gradient(to top,
+    color(var(--color-yellow) a(0%)) 12%,
+    color(var(--color-yellow) a(15%)) 12%,
+    color(var(--color-yellow) a(15%)) 17%,
+    color(var(--color-yellow) a(0%)) 17%
+  );
+}
+
+.card--blue a,
+.card--blue .card__header { color: var(--color-blue); }
+.card--blue .magic-underline {
+  background-image: linear-gradient(to top,
+    color(var(--color-blue) a(0%)) 12%,
+    color(var(--color-blue) a(15%)) 12%,
+    color(var(--color-blue) a(15%)) 17%,
+    color(var(--color-blue) a(0%)) 17%
+  );
+}

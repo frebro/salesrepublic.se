@@ -1,5 +1,8 @@
 .brand {
   position: relative;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .brand__symbol {
@@ -26,26 +29,44 @@
 
 
 /*
- * Symbol SVG
+ * Horisontal variation
  */
 
-.brand__symbol .st0 {
-  fill: transparent; /* var(--color-lightyellow); */
+.brand.brand--horisontal:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.brand__symbol .st1 {
-  fill: var(--color-darkgray);
+.brand.brand--horisontal .brand__symbol {
+  float: left;
+  width: 25%;
+  margin-bottom: 0;
+  margin-left: 0;
 }
 
-.brand__symbol .st2 {
-  fill: color(var(--color-darkgray) a(50%));
+.brand.brand--horisontal .brand__wordmark {
+  float: right;
+  width: 70%;
+  margin-top: 7%;
 }
 
 
 /*
- * Wordmark SVG
+ * Colors
  */
 
-.brand__wordmark .st0 {
-  fill: var(--color-darkgray);
-}
+/* Inverse wordmark for dark backgrounds */
+.brand--inverse .brand__wordmark .st0 { fill: var(--color-lightgray); }
+
+/* Dark gray (default) */
+.brand__symbol .st0 { fill: var(--color-lightgray); }
+.brand__symbol .st1 { fill: var(--color-darkgray); }
+.brand__symbol .st2 { fill: color(var(--color-gray) a(50%)); }
+.brand__wordmark .st0 { fill: var(--color-darkgray); }
+
+/* No badge */
+.brand--nobadge .brand__symbol .st0 { fill: transparent; }
+.brand--nobadge .brand__symbol .st2 { fill: var(--color-darkgray); }
+.brand--nobadge.brand--inverse .brand__symbol .st1 { fill: var(--color-lightgray); }
+.brand--nobadge.brand--inverse .brand__symbol .st2 { fill: var(--color-lightgray); }

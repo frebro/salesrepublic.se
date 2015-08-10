@@ -15,16 +15,27 @@
   --body-background:  white;
   --body-color:       var(--color-darkgray);
 
-  --body-padding-h:   30px;
-  --body-padding-v:   40px;
+  --rem-base:   19px;
+  --rem-s:      0.7894736842rem; /* 15px @19 */
+  --rem-l:      1.5789473684rem; /* 30px @19 */
+  --rem-xl:     3.0526315789rem; /* 58px @19 */
 
-  --font-sans:    'Whitney SSm A', 'Whitney SSm B', monospace;
-  --font-serif:   'Mercury SSm A', 'Mercury SSm B', monospace;
+  --page-padding:       40px;
+  --content-padding-v:  30px;
+  --content-padding-h:  40px;
+  --content-width:      720px;
+  --content-width--s:   480px;
+  --content-width--l:   960px;
 
-  --font-weight-normal:   300;
-  --font-weight-bold:     500;
+  --sans-family:  'Whitney SSm A', 'Whitney SSm B', monospace;
+  --sans-weight:  400;
+  --sans-bold:    800;
+
+  --serif-family:   'Mercury SSm A', 'Mercury SSm B', monospace;
+  --serif-weight:   300;
+  --serif-bold:     500;
 
   --animation-duration:       240ms;
-  --animation-duration-slow:  720ms;
+  --animation-duration-slow:  1.4s;
   --animation-function:       cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */
 }

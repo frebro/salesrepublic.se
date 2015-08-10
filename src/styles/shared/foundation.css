@@ -2,6 +2,10 @@
  * See: http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation
  */
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -11,9 +15,10 @@ html {
 }
 body {
   margin: 0;
-  font: var(--font-weight-normal) 16px/1 var(--font-sans);
+  font: var(--serif-weight) var(--rem-base)/1.6 var(--serif-family);
   background-color: var(--body-background);
   color: var(--body-color);
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1;
 }
 iframe {
   border: 0;
@@ -45,8 +50,22 @@ p {
   font-size: inherit;
   font-weight: inherit;
 }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: .25em;
+  margin-bottom: .5em;
+}
+p,
+ul,
+ol {
+  margin-bottom: 1em;
+}
 strong {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--serif-bold);
+  letter-spacing: -.02em;
 }
 a,
 button {

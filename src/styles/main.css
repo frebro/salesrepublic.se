@@ -2,8 +2,7 @@
 @import 'shared/foundation';
 @import 'shared/utilities';
 
-@import 'components/background';
 @import 'components/header';
+@import 'components/footer';
 @import 'components/brand';
-@import 'components/navbar';
-@import 'components/banner';
+@import 'components/card';
