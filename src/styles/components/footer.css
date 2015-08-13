@@ -12,3 +12,12 @@
   max-width: 80%;
   margin-bottom: 10vh;
 }
+
+.magic-underline {
+  background-image: linear-gradient(to top,
+    color(white a(0%)) 12%,
+    color(white a(30%)) 12%,
+    color(white a(30%)) 15%,
+    color(white a(0%)) 15%
+  );
+}
