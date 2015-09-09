@@ -1,4 +1,8 @@
-:root { /* 15px @19 */ /* 30px @19 */ /* 58px @19 */ /* easeInOutCubic */
+:root {
+
+  /* Golden section modular scale
+   * http://www.modularscale.com/?19&px&1.618&web&text
+   */          /* ~14px @19 / ~12px @16 */  /* ~31px @19 / ~26px @16 */  /* ~50px @19 / ~42px @16 */ /* easeInOutCubic */
 }
 /* Foundation
  * See: http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation
@@ -6,18 +10,25 @@
 
 * {
   box-sizing: border-box;
+  -webkit-transition: all .6s ease-in-out;
+          transition: all .6s ease-in-out;
 }
 
 html {
+  font: 300 118.75%/1.6 'Mercury SSm A', 'Mercury SSm B', serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
 }
+@media (max-width: 480px) {
+  html {
+    font-size: 100%;
+  }
+}
 body {
   margin: 0;
-  font: 300 19px/1.6 'Mercury SSm A', 'Mercury SSm B', monospace;
   background-color: white;
   color: #30332D;
   -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1;
@@ -71,6 +82,10 @@ strong {
   font-weight: 500;
   letter-spacing: -.02em;
 }
+small {
+  font-size: 14px;
+  font-size: 0.75rem;
+}
 a,
 button {
   color: inherit;
@@ -109,13 +124,13 @@ img {
 }
 
 /* Font helpers */
-.font-sans { font-family: 'Whitney SSm A', 'Whitney SSm B', monospace; }
+.font-sans { font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif; }
 .font-sans strong { font-weight: 800; }
-.font-serif { font-family: 'Mercury SSm A', 'Mercury SSm B', monospace; }
+.font-serif { font-family: 'Mercury SSm A', 'Mercury SSm B', serif; }
 .font-serif strong { font-weight: 500; }
-.font-s { font-size: 12px; font-size: 0.7894736842rem; }
-.font-l { font-size: 25px; font-size: 1.5789473684rem; }
-.font-xl { font-size: 48px; font-size: 3.0526315789rem; }
+.font-s { font-size: 14px; font-size: 0.75rem; }
+.font-l { font-size: 31px; font-size: 1.6315789474rem; }
+.font-xl { font-size: 50px; font-size: 2.6315789474rem; }
 
 /* Magic underline */
 .magic-underline {
@@ -128,6 +143,14 @@ img {
     rgba(0, 0, 0, 0.15) 17%,
     rgba(0, 0, 0, 0) 17%
   );
+}
+
+/* Card animation */
+.animate-in {
+  -webkit-transform: translateY(40px);
+      -ms-transform: translateY(40px);
+          transform: translateY(40px);
+  opacity: 0;
 }
 
 .header {
@@ -145,8 +168,9 @@ img {
  */
 
 .header .brand {
-  width: 960px;
-  max-width: 100%;
+  width: 988px;
+  width: 52rem;
+  max-width: 80%;
   margin-top: 6vh;
 }
 .footer {
@@ -160,7 +184,8 @@ img {
 }
 
 .footer .brand {
-  width: 960px;
+  width: 988px;
+  width: 52rem;
   max-width: 80%;
   margin-bottom: 10vh;
 }
@@ -173,6 +198,27 @@ img {
     rgba(255, 255, 255, 0.3) 15%,
     rgba(255, 255, 255, 0) 15%
   );
+}
+.toolbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  height: 66px;
+  height: 3.5rem;
+
+  background-color: #94998F;
+  box-shadow: 2px 0 3px black;
+}
+
+.toolbar .brand {
+  position: absolute;
+  top: 5px;
+  left: 50px;
+
+  width: 226px;
+  width: 11.9rem;
 }
 .brand {
   position: relative;
@@ -263,9 +309,9 @@ img {
   position: relative;
   margin-top: 1em;
   padding-bottom: .5em;
-  font-size: 48px;
-  font-size: 3.0526315789rem;
-  font-family: 'Whitney SSm A', 'Whitney SSm B', monospace;
+  font-size: 50px;
+  font-size: 2.6315789474rem;
+  font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
   font-weight: 800;
   line-height: 1.15;
 }
@@ -287,9 +333,11 @@ img {
  */
 
 .card__content {
-  width: 720px;
+  width: 760px;
+  width: 40rem;
   max-width: 90%;
-  padding: 30px 40px;
+  padding: 28px 38px;
+  padding: 1.5rem 2rem;
   margin: 0 auto;
 }
 .card__content:after {
@@ -298,18 +346,26 @@ img {
   clear: both;
 }
 
-.card__content--s { width: 480px; }
-.card__content--l { width: 960px; }
+.card__content--s { width: 646px; width: 34rem; }
+.card__content--l { width: 988px; width: 52rem; }
+
+@media (max-width: 480px) {
+  .card__content {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
 
 
 /*
  * Layout variations
  */
 
-.card__content--centered { text-align: center; }
-.card__content--centered .card__header:before { left: 50%; margin-left: -.5em; }
-.card__content--bordered { border-top: 3px solid; }
-
+@media (min-width: 481px) {
+  .card__content--centered { text-align: center; }
+  .card__content--centered .card__header:before { left: 50%; margin-left: -.5em; }
+  .card__content--bordered { border-top: 3px solid; }
+}
 
 /*
  * Color variations
@@ -349,4 +405,20 @@ img {
     rgba(72, 130, 195, 0.15) 17%,
     rgba(72, 130, 195, 0) 17%
   );
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: #94998F;
+
+  background-color: rgba(148, 153, 143, 0.6);
+}
+
+.overlay.overlay--toolbar {
+  top: 66px;
+  top: 3.5rem;
 }
