@@ -13,6 +13,6 @@
 
 .header .brand {
   width: var(--content-width--l);
-  max-width: 100%;
+  max-width: 80%;
   margin-top: 6vh;
 }

@@ -158,9 +158,9 @@ img {
  */
 
 .header .brand {
-  width: 950px;
-  width: 50rem;
-  max-width: 100%;
+  width: 988px;
+  width: 52rem;
+  max-width: 80%;
   margin-top: 6vh;
 }
 .footer {
@@ -174,8 +174,8 @@ img {
 }
 
 .footer .brand {
-  width: 950px;
-  width: 50rem;
+  width: 988px;
+  width: 52rem;
   max-width: 80%;
   margin-bottom: 10vh;
 }
@@ -315,8 +315,8 @@ img {
   clear: both;
 }
 
-.card__content--s { width: 570px; width: 30rem; }
-.card__content--l { width: 950px; width: 50rem; }
+.card__content--s { width: 646px; width: 34rem; }
+.card__content--l { width: 988px; width: 52rem; }
 
 @media (max-width: 480px) {
   .card__content {
