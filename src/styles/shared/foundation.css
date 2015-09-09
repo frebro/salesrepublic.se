@@ -7,15 +7,20 @@
 }
 
 html {
+  font: var(--serif-weight) var(--rem-base-desktop)/1.6 var(--serif-family);
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
 }
+@media (max-width: 480px) {
+  html {
+    font-size: var(--rem-base-mobile);
+  }
+}
 body {
   margin: 0;
-  font: var(--serif-weight) var(--rem-base)/1.6 var(--serif-family);
   background-color: var(--body-background);
   color: var(--body-color);
   font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1;
@@ -66,6 +71,9 @@ ol {
 strong {
   font-weight: var(--serif-bold);
   letter-spacing: -.02em;
+}
+small {
+  font-size: var(--rem-s);
 }
 a,
 button {

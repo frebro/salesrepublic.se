@@ -15,25 +15,32 @@
   --body-background:  white;
   --body-color:       var(--color-darkgray);
 
-  --rem-base:   19px;
-  --rem-s:      0.7894736842rem; /* 15px @19 */
-  --rem-l:      1.5789473684rem; /* 30px @19 */
-  --rem-xl:     3.0526315789rem; /* 58px @19 */
+  /* Golden section modular scale
+   * http://www.modularscale.com/?19&px&1.618&web&text
+   */
+  --rem-base-mobile:    100%;
+  --rem-base-desktop:   118.75%;
+  --rem-s:              0.75rem;          /* ~14px @19 / ~12px @16 */
+  --rem-l:              1.6315789474rem;  /* ~31px @19 / ~26px @16 */
+  --rem-xl:             2.6315789474rem;  /* ~50px @19 / ~42px @16 */
 
-  --page-padding:       40px;
-  --content-padding-v:  30px;
-  --content-padding-h:  40px;
-  --content-width:      720px;
-  --content-width--s:   480px;
-  --content-width--l:   960px;
 
-  --sans-family:  'Whitney SSm A', 'Whitney SSm B', monospace;
+  --sans-family:  'Whitney SSm A', 'Whitney SSm B', sans-serif;
   --sans-weight:  400;
   --sans-bold:    800;
 
-  --serif-family:   'Mercury SSm A', 'Mercury SSm B', monospace;
+  --serif-family:   'Mercury SSm A', 'Mercury SSm B', serif;
   --serif-weight:   300;
   --serif-bold:     500;
+
+
+  --page-padding:       2rem;
+  --content-padding-v:  1.5rem;
+  --content-padding-h:  2rem;
+  --content-width:      40rem;
+  --content-width--s:   30rem;
+  --content-width--l:   50rem;
+
 
   --animation-duration:       240ms;
   --animation-duration-slow:  1.4s;

@@ -48,15 +48,23 @@
 .card__content--s { width: var(--content-width--s); }
 .card__content--l { width: var(--content-width--l); }
 
+@media (max-width: 480px) {
+  .card__content {
+    padding-right: calc(var(--content-padding-h) / 2);
+    padding-left: calc(var(--content-padding-h) / 2);
+  }
+}
+
 
 /*
  * Layout variations
  */
 
-.card__content--centered { text-align: center; }
-.card__content--centered .card__header:before { left: 50%; margin-left: -.5em; }
-.card__content--bordered { border-top: 3px solid; }
-
+@media (min-width: 481px) {
+  .card__content--centered { text-align: center; }
+  .card__content--centered .card__header:before { left: 50%; margin-left: -.5em; }
+  .card__content--bordered { border-top: 3px solid; }
+}
 
 /*
  * Color variations
