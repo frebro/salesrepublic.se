@@ -25,3 +25,13 @@
     color(black a(0%)) 17%
   );
 }
+
+/* Card animation */
+.animate {
+  transition: all .6s ease-in-out;
+}
+
+.animate-in {
+  transform: translateY(40px);
+  opacity: 0;
+}

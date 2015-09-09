@@ -143,6 +143,19 @@ img {
   );
 }
 
+/* Card animation */
+.animate {
+  -webkit-transition: all .6s ease-in-out;
+          transition: all .6s ease-in-out;
+}
+
+.animate-in {
+  -webkit-transform: translateY(40px);
+      -ms-transform: translateY(40px);
+          transform: translateY(40px);
+  opacity: 0;
+}
+
 .header {
   background-color: #D3E5EA;
   background-image: -webkit-linear-gradient(280deg, rgba(211, 229, 234, 0.1) 0%, rgba(211, 229, 234, 0.03) 50%, rgba(15, 41, 58, 0.1) 50%, rgba(15, 41, 58, 0.03) 100%), url('../images/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD-(1-of-1)-5.jpg');
