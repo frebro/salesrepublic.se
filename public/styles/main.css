@@ -199,6 +199,27 @@ img {
     rgba(255, 255, 255, 0) 15%
   );
 }
+.toolbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  height: 66px;
+  height: 3.5rem;
+
+  background-color: #94998F;
+  box-shadow: 2px 0 3px black;
+}
+
+.toolbar .brand {
+  position: absolute;
+  top: 5px;
+  left: 50px;
+
+  width: 226px;
+  width: 11.9rem;
+}
 .brand {
   position: relative;
   display: block;
@@ -384,4 +405,20 @@ img {
     rgba(72, 130, 195, 0.15) 17%,
     rgba(72, 130, 195, 0) 17%
   );
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: #94998F;
+
+  background-color: rgba(148, 153, 143, 0.6);
+}
+
+.overlay.overlay--toolbar {
+  top: 66px;
+  top: 3.5rem;
 }

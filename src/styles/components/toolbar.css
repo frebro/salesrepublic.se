@@ -1,0 +1,19 @@
+.toolbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  height: var(--toolbar-height);
+
+  background-color: var(--color-gray);
+  box-shadow: 2px 0 3px black;
+}
+
+.toolbar .brand {
+  position: absolute;
+  top: 5px;
+  left: 50px;
+
+  width: var(--toolbar-brand-width);
+}

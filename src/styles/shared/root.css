@@ -42,6 +42,10 @@
   --content-width--l:   52rem;
 
 
+  --toolbar-height:         3.5rem;
+  --toolbar-brand-width:   calc(var(--toolbar-height) * 3.4);
+
+
   --animation-duration:       240ms;
   --animation-duration-slow:  1.4s;
   --animation-function:       cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */

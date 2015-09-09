@@ -4,5 +4,7 @@
 
 @import 'components/header';
 @import 'components/footer';
+@import 'components/toolbar';
 @import 'components/brand';
 @import 'components/card';
+@import 'components/overlay';
