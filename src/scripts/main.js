@@ -33,7 +33,7 @@
   Cards = (function(_super) {
     __extends(Cards, _super);
 
-    Cards.prototype.animateInOffset = 120;
+    Cards.prototype.animateInOffset = 90;
 
     Cards.prototype.animateInClass = "dont-animate";
 
