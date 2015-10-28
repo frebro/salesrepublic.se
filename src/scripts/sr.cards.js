@@ -1,5 +1,5 @@
 (function() {
-  var Pages, Cards,
+  var Pages, Card,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
@@ -30,14 +30,14 @@
 
   })();
 
-  Cards = (function(_super) {
-    __extends(Cards, _super);
+  Card = (function(_super) {
+    __extends(Card, _super);
 
-    Cards.prototype.animateInOffset = 90;
+    Card.prototype.animateInOffset = 90;
 
-    Cards.prototype.animateInClass = "dont-animate";
+    Card.prototype.animateInClass = "dont-animate";
 
-    function Cards() {
+    function Card() {
       this.animateInPresentElements = __bind(this.animateInPresentElements, this);
       if (this.browserSupportsCSSProperty("transition")) {
         this.animateInClass = "animate-in";
@@ -45,7 +45,7 @@
       $(window).scroll(this.animateInPresentElements);
     }
 
-    Cards.prototype.animateInPresentElements = function(index) {
+    Card.prototype.animateInPresentElements = function(index) {
       var bottomScrollPosition, windowHeight, windowScrollPosition,
         _this = this;
       windowHeight = $(window).height();
@@ -58,12 +58,12 @@
       });
     };
 
-    return Cards;
+    return Card;
 
   })(Pages);
 
   $(function() {
-    return new Cards();
+    return new Card();
   });
 
 }).call(this);
