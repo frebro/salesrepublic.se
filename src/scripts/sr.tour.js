@@ -7,7 +7,7 @@
    * @type {String}
    * @api private
    */
-  var NAMESPACE = 'im.tour',
+  var NAMESPACE = 'sr.tour',
       SELECTOR = '.tour';
 
   /**

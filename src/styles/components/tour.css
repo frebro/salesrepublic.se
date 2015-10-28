@@ -1,50 +1,35 @@
-.tour {
+/**
+ * Tour component
+ */
 
-}
+.tour { }
 
-.tour__map {
-}
 
-.tour__map-image,
-.tour__map-key {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-}
 
-.tour__map-image {
-  max-width: var(--content-width--l);
-}
+/* Tour Map
+   ==================================================================== */
 
-.tour__map-key {
-  color: var(--color-darkblue);
-  list-style: decimal;
+.tour__map { }
 
-  margin-top: var(--content-padding-v);
-  margin-bottom: var(--content-padding-v);
-  max-width: var(--content-width--s);
-}
-.tour__map-key:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+// Map image and locations
+//
+.tour__map-canvas { }
 
-.tour__map-key-item {
-  font-family: var(--sans-family);
-  font-weight: var(--sans-bold);
-  font-size: var(--rem-s);
+.tour__map-image { }
 
-  display: list-item;
-  float: left;
-  width: 160px;
-  padding-right: 2em;
-  padding-left: 1em;
-}
-.tour__map-key-item:nth-child(odd) {
-  clear: left;
-}
+.tour__map-location { }
 
-.tour__map-key-item .button {
-  color: var(--color-blue);
-}
+// Map keys
+//
+.tour__map-keys { }
+
+.tour__map-key { }
+
+
+
+/* Tour Steps
+   ==================================================================== */
+
+.tour__steps { }
+
+.tour__step { }
