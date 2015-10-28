@@ -27,7 +27,7 @@
 }
 
 /* Card animation */
-.animate-in {
+html.js .animate-in {
   transform: translateY(40px);
   opacity: 0;
 }
