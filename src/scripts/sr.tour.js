@@ -83,7 +83,8 @@
         this.options.activeTarget.removeClass('is-active');
       }
 
-      // Set target to active
+      // Set element and target to active
+      this.$element.addClass('is-active');
       $target.addClass('is-active');
       this.options.activeTarget = $target;
     },

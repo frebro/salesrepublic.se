@@ -3,8 +3,7 @@
  */
 
 .tour {
-  padding-left: var(--page-padding);
-  padding-right: var(--page-padding);
+  position: relative;
 }
 
 
@@ -12,7 +11,13 @@
 /* Tour Map
    ==================================================================== */
 
-.tour__map { }
+.tour__map {
+  padding-left: var(--page-padding);
+  padding-right: var(--page-padding);
+}
+.tour.is-active .tour__map {
+  width: 50%;
+}
 
 /* Map image and locations
 */
@@ -147,7 +152,18 @@
 /* Tour Steps
    ==================================================================== */
 
-.tour__steps { }
+.tour__steps {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  padding-left: var(--page-padding);
+  padding-right: var(--page-padding);
+}
+.tour.is-active .tour__steps {
+  width: 50%;
+}
 
 .tour__step { }
 .tour__step.is-active {
