@@ -53,7 +53,7 @@
       var targetId = $control.data('target');
 
       // Highlight any control with the targetId
-      this.$locationControls.filter('[data-target="' + targetId + '"]').css('background-color', 'salmon');
+      this.$locationControls.filter('[data-target="' + targetId + '"]').addClass('is-active');
     },
 
     /**
@@ -64,7 +64,7 @@
       var targetId = $control.data('target');
 
       // Remove highlight from any control with the targetId
-      this.$locationControls.filter('[data-target="' + targetId + '"]').css('background-color', '');
+      this.$locationControls.filter('[data-target="' + targetId + '"]').removeClass('is-active');
     },
 
     /**
@@ -76,15 +76,15 @@
       var $target = $('#' + targetId);
 
       // Highlight any control with the targetId
-      this.$locationControls.filter('[data-target="' + targetId + '"]').css('background-color', 'salmon');
+      this.$locationControls.filter('[data-target="' + targetId + '"]').addClass('is-active');
 
       // Make currently active target inactive
       if (this.options.activeTarget) {
-        this.options.activeTarget.css('background-color', '');
+        this.options.activeTarget.removeClass('is-active');
       }
 
       // Set target to active
-      $target.css('background-color', 'gold');
+      $target.addClass('is-active');
       this.options.activeTarget = $target;
     },
 
@@ -96,7 +96,7 @@
       var targetId = $control.data('target');
 
       // Remove highlight from any control with the targetId
-      this.$locationControls.filter('[data-target="' + targetId + '"]').css('background-color', '');
+      this.$locationControls.filter('[data-target="' + targetId + '"]').removeClass('is-active');
     },
 
   };

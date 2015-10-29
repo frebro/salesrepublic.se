@@ -441,13 +441,21 @@ html.js .animate-in {
 
 .tour__map-image { }
 
-.tour__map-location { }
+.tour__map-button { }
+.tour__map-button.is-active {
+  background-color: salmon;
+}
 
 // Map keys
 //
 .tour__map-keys { }
 
 .tour__map-key { }
+
+.tour__map-key-button { }
+.tour__map-key-button.is-active {
+  background-color: gold;
+}
 
 
 
@@ -457,3 +465,6 @@ html.js .animate-in {
 .tour__steps { }
 
 .tour__step { }
+.tour__step.is-active {
+  background-color: skyblue;
+}
