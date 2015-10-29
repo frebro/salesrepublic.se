@@ -1,5 +1,5 @@
 .header {
-  background-color: var(--color-blue);
+  background-color: var(--color-gray);
   background-image: linear-gradient(170deg, color(var(--color-green) a(10%)) 0%, color(var(--color-darkgray) a(3%)) 50%, color(var(--color-darkgray) a(10%)) 50%, color(var(--color-blue) a(3%)) 100%),
     url('../../images/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD-(1-of-1)-5.jpg');
   color: white;
