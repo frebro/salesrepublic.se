@@ -192,7 +192,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.tour__map-key-button.is-active {
+.tour__map-key-button.is-active,
+.tour__map-key-button:focus {
+  outline: none;
   background-image: linear-gradient(to top,
     color(var(--color-yellow) a(0%)) 12%,
     color(var(--color-yellow) a(100%)) 12%,
@@ -251,6 +253,9 @@
 }
 .tour__steps-close-button:after {
   transform: rotate(-45deg);
+}
+.tour__steps-close-button:focus {
+  outline: none;
 }
 .tour__steps-close-button:hover:before,
 .tour__steps-close-button:hover:after,
