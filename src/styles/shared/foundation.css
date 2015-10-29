@@ -79,7 +79,7 @@ small {
 a,
 button {
   color: inherit;
-  transition: $global-transition-duration;
+  transition: var(--animation-duration);
 }
 a {
   text-decoration: none;
@@ -92,9 +92,9 @@ button {
   background: none;
   cursor: pointer;
   -webkit-font-smoothing: inherit;
-  &:focus {
-    outline: 0;
-  }
+}
+button:focus {
+  outline: 0;
 }
 ::-moz-focus-inner {
   padding: 0;
