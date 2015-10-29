@@ -5,6 +5,8 @@
   color: white;
   background-size: cover;
   background-position: bottom center;
+
+  min-height: 100vh;
 }
 
 /*
