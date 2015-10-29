@@ -42,7 +42,7 @@
       // Set up interactions for location controls
       this.$locationControls.on('mouseenter', $.proxy(this.enterLocationControl, this));
       this.$locationControls.on('mouseleave', $.proxy(this.leaveLocationControl, this));
-      this.$locationControls.on('focusin', $.proxy(this.focusLocationControl, this));
+      this.$locationControls.on('click focusin', $.proxy(this.focusLocationControl, this));
       this.$locationControls.on('focusout', $.proxy(this.blurLocationControl, this));
 
       this.$stepsCloseButton.on('click', $.proxy(this.setTourInactive, this));
@@ -52,6 +52,7 @@
      * Mouse Enter Location Control method
      */
     enterLocationControl: function(event) {
+      console.log('enterLocationControl');
       var $control = $(event.target);
       var stepId = $control.data('target');
 
@@ -63,6 +64,7 @@
      * Mouse Leave Location Control method
      */
     leaveLocationControl: function(event) {
+      console.log('leaveLocationControl');
       var $control = $(event.target);
       var stepId = $control.data('target');
 
@@ -74,6 +76,7 @@
      * Focus Location Control method
      */
     focusLocationControl: function(event) {
+      console.log('focusLocationControl');
       var $control = $(event.target);
       var stepId = $control.data('target');
       var $step = $('#' + stepId);
@@ -98,6 +101,7 @@
      * Blur Location Control method
      */
     blurLocationControl: function(event) {
+      console.log('blurLocationControl');
       var $control = $(event.target);
       var stepId = $control.data('target');
 
