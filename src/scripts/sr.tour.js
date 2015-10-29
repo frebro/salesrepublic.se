@@ -50,10 +50,10 @@
      */
     enterLocationControl: function(event) {
       var $control = $(event.target);
-      var targetId = $control.data('target');
+      var stepId = $control.data('target');
 
-      // Highlight any control with the targetId
-      this.$locationControls.filter('[data-target="' + targetId + '"]').addClass('is-active');
+      // Highlight any control with the stepId
+      this.$locationControls.filter('[data-target="' + stepId + '"]').addClass('is-active');
     },
 
     /**
@@ -61,10 +61,10 @@
      */
     leaveLocationControl: function(event) {
       var $control = $(event.target);
-      var targetId = $control.data('target');
+      var stepId = $control.data('target');
 
-      // Remove highlight from any control with the targetId
-      this.$locationControls.filter('[data-target="' + targetId + '"]').removeClass('is-active');
+      // Remove highlight from any control with the stepId
+      this.$locationControls.filter('[data-target="' + stepId + '"]').removeClass('is-active');
     },
 
     /**
@@ -72,21 +72,23 @@
      */
     focusLocationControl: function(event) {
       var $control = $(event.target);
-      var targetId = $control.data('target');
-      var $target = $('#' + targetId);
+      var stepId = $control.data('target');
+      var $step = $('#' + stepId);
 
-      // Highlight any control with the targetId
-      this.$locationControls.filter('[data-target="' + targetId + '"]').addClass('is-active');
+      // Highlight any control with the stepId
+      this.$locationControls.filter('[data-target="' + stepId + '"]').addClass('is-active');
 
       // Make currently active target inactive
-      if (this.options.activeTarget) {
-        this.options.activeTarget.removeClass('is-active');
+      if (this.options.activeStepId) {
+        $('#' + this.options.activeStepId).removeClass('is-active');
       }
 
-      // Set element and target to active
-      this.$element.addClass('is-active');
-      $target.addClass('is-active');
-      this.options.activeTarget = $target;
+      // Set target to active
+      $step.addClass('is-active');
+      this.options.activeStepId = stepId;
+
+      // Set active step
+      this.setActiveStep(stepId);
     },
 
     /**
@@ -94,11 +96,29 @@
      */
     blurLocationControl: function(event) {
       var $control = $(event.target);
-      var targetId = $control.data('target');
+      var stepId = $control.data('target');
 
-      // Remove highlight from any control with the targetId
-      this.$locationControls.filter('[data-target="' + targetId + '"]').removeClass('is-active');
+      // Remove highlight from any control with the stepId
+      this.$locationControls.filter('[data-target="' + stepId + '"]').removeClass('is-active');
     },
+
+    /**
+     * Set Step to Active
+     */
+    setActiveStep: function(stepId) {
+
+      // Set class on container to signal that a step is active
+      this.$element.addClass('is-step-active');
+    },
+
+    /**
+     * Set Tour to Inactive
+     */
+    setTourInactive: function() {
+
+      // Remove class on container to signal that no steps are active
+      this.$element.removeClass('is-step-active');
+    }
 
   };
 
@@ -127,7 +147,7 @@
    * @api public
    */
   $.fn[NAMESPACE].defaults = {
-    activeTarget: null
+    activeStepId: null
   };
 
   /**

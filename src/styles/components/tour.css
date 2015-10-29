@@ -12,10 +12,11 @@
    ==================================================================== */
 
 .tour__map {
+  width: 100%;
   padding-left: var(--page-padding);
   padding-right: var(--page-padding);
 }
-.tour.is-active .tour__map {
+.tour.is-step-active .tour__map {
   width: 50%;
 }
 
@@ -26,6 +27,7 @@
   max-width: 1070px; /* Natural width of image */
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 2em;
 }
 
 /* Map image */
@@ -70,11 +72,24 @@
     margin-left: -16px;
     font-size: 1rem;
   }
+  .tour.is-step-active .tour__map-canvas-button {
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+    margin-left: -9px;
+    font-size: 1rem;
+  }
   .tour__map-canvas-button.is-active {
     width: 48px;
     height: 48px;
     margin-top: -24px;
     margin-left: -24px;
+  }
+  .tour.is-step-active .tour__map-canvas-button.is-active {
+    width: 32px;
+    height: 32px;
+    margin-top: -16px;
+    margin-left: -16px;
   }
 }
 @media (min-width: 769px) {
@@ -83,13 +98,27 @@
     height: 48px;
     margin-top: -24px;
     margin-left: -24px;
+
     font-size: var(--rem-l);
+  }
+  .tour.is-step-active .tour__map-canvas-button {
+    width: 32px;
+    height: 32px;
+    margin-top: -16px;
+    margin-left: -16px;
+    font-size: 1rem;
   }
   .tour__map-canvas-button.is-active {
     width: 64px;
     height: 64px;
     margin-top: -32px;
     margin-left: -32px;
+  }
+  .tour.is-step-active .tour__map-canvas-button.is-active {
+    width: 48px;
+    height: 48px;
+    margin-top: -24px;
+    margin-left: -24px;
   }
 }
 /* Button positions */
@@ -140,6 +169,7 @@
   line-height: 1.6em;
   text-align: center;
 }
+/* Display side-by-side on larger screens */
 @media (min-width: 769px) {
   .tour__map-key {
     width: 50%;
@@ -151,8 +181,17 @@
     width: 33%;
   }
 }
+/* Always display vertically when a step is shown */
+.tour.is-step-active .tour__map-key {
+  width: 100% !important;
+}
 
-.tour__map-key-button { }
+.tour__map-key-button {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .tour__map-key-button.is-active {
   background-image: linear-gradient(to top,
     color(var(--color-yellow) a(0%)) 12%,
@@ -168,19 +207,34 @@
    ==================================================================== */
 
 .tour__steps {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: absolute;
   top: 0;
   right: 0;
   width: 0;
+  height: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.tour.is-step-active .tour__steps {
+  width: 50%;
   padding-left: var(--page-padding);
   padding-right: var(--page-padding);
 }
-.tour.is-active .tour__steps {
-  width: 50%;
-}
 
-.tour__step { }
+.tour__step {
+  background-color: var(--body-background);
+  border-left: 2px solid var(--color-lightgray);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 1000px;
+  padding-left: var(--page-padding);
+  padding-right: var(--page-padding);
+}
 .tour__step.is-active {
-  background-color: skyblue;
+  left: 0;
 }
