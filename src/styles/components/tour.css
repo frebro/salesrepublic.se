@@ -223,6 +223,42 @@
   padding-right: var(--page-padding);
 }
 
+.tour__steps-close-button {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: var(--page-padding);
+  width: 48px;
+  height: 48px;
+
+  text-indent: 100%;
+}
+.tour__steps-close-button:before,
+.tour__steps-close-button:after {
+  content: '';
+  background-color: var(--color-gray);
+
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  left: 0;
+
+  transition: background-color 120ms linear;
+}
+.tour__steps-close-button:before {
+  transform: rotate(45deg);
+}
+.tour__steps-close-button:after {
+  transform: rotate(-45deg);
+}
+.tour__steps-close-button:hover:before,
+.tour__steps-close-button:hover:after,
+.tour__steps-close-button:focus:before,
+.tour__steps-close-button:focus:after {
+  background-color: var(--color-yellow);
+}
+
 .tour__step {
   background-color: var(--body-background);
   border-left: 2px solid var(--color-lightgray);
@@ -231,7 +267,7 @@
   top: 0;
   left: 100%;
   width: 100%;
-  height: 1000px;
+  min-height: 100%;
   padding-left: var(--page-padding);
   padding-right: var(--page-padding);
 }

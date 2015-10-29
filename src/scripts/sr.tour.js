@@ -20,6 +20,7 @@
     this.options = $.extend(true, $.fn[NAMESPACE].defaults, options);
     this.$element = $(element);
     this.$locationControls = $('[data-target]', this.$element);
+    this.$stepsCloseButton = $('.tour__steps-close-button', this.$element);
   }
 
 
@@ -43,6 +44,8 @@
       this.$locationControls.on('mouseleave', $.proxy(this.leaveLocationControl, this));
       this.$locationControls.on('focusin', $.proxy(this.focusLocationControl, this));
       this.$locationControls.on('focusout', $.proxy(this.blurLocationControl, this));
+
+      this.$stepsCloseButton.on('click', $.proxy(this.setTourInactive, this));
     },
 
     /**
@@ -115,6 +118,8 @@
      * Set Tour to Inactive
      */
     setTourInactive: function() {
+
+      console.log('setTourInactive');
 
       // Remove class on container to signal that no steps are active
       this.$element.removeClass('is-step-active');
