@@ -36,10 +36,10 @@
 /* Buttons on image */
 .tour__map-canvas-button {
   position: absolute;
-  width: 32px;
-  height: 32px;
-  margin-top: -16px;
-  margin-left: -16px;
+  width: 18px;
+  height: 18px;
+  margin-top: -9px;
+  margin-left: -9px;
 
   transition: all 90ms ease-out;
 
@@ -48,19 +48,35 @@
   border-radius: 50%;
   box-shadow: 1px 2px 3px rgba(0,0,0,.05);
 
+  font-size: var(--rem-s);
   font-family: var(--sans-family);
   font-weight: var(--sans-bold);
-  line-height: 30px;
+  line-height: 1em;
 }
 /* Button active state */
 .tour__map-canvas-button.is-active {
   background-color: var(--color-orange);
-  width: 48px;
-  height: 48px;
-  margin-top: -24px;
-  margin-left: -24px;
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  margin-left: -16px;
 }
 /* Larger buttons on large screens */
+@media (min-width: 479px) {
+  .tour__map-canvas-button {
+    width: 32px;
+    height: 32px;
+    margin-top: -16px;
+    margin-left: -16px;
+    font-size: 1rem;
+  }
+  .tour__map-canvas-button.is-active {
+    width: 48px;
+    height: 48px;
+    margin-top: -24px;
+    margin-left: -24px;
+  }
+}
 @media (min-width: 769px) {
   .tour__map-canvas-button {
     width: 48px;
@@ -68,7 +84,6 @@
     margin-top: -24px;
     margin-left: -24px;
     font-size: var(--rem-l);
-    line-height: 44px;
   }
   .tour__map-canvas-button.is-active {
     width: 64px;
