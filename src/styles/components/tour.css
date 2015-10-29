@@ -84,13 +84,62 @@
 
 /* Map keys
 */
-.tour__map-keys { }
+.tour__map-keys {
+  counter-reset: li;
 
-.tour__map-key { }
+  position: relative;
+  max-width: 1070px; /* Matches .tour__map-canvas */
+  margin-right: auto;
+  margin-left: auto;
+}
+.tour__map-keys:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tour__map-key {
+  position: relative;
+  padding: .25em 1em .25em 2em;
+}
+.tour__map-key:before {
+  content: counter(li);
+  counter-increment: li;
+
+  position: absolute;
+  top: .25em;
+  left: 0;
+  width: 1.6em;
+  height: 1.6em;
+
+  background-color: var(--color-yellow);
+  border-radius: 50%;
+
+  font-family: var(--sans-family);
+  font-weight: var(--sans-bold);
+  line-height: 1.6em;
+  text-align: center;
+}
+@media (min-width: 769px) {
+  .tour__map-key {
+    width: 50%;
+    float: left;
+  }
+}
+@media (min-width: 1025px) {
+  .tour__map-key {
+    width: 33%;
+  }
+}
 
 .tour__map-key-button { }
 .tour__map-key-button.is-active {
-  background-color: gold;
+  background-image: linear-gradient(to top,
+    color(var(--color-yellow) a(0%)) 12%,
+    color(var(--color-yellow) a(100%)) 12%,
+    color(var(--color-yellow) a(100%)) 17%,
+    color(var(--color-yellow) a(0%)) 17%
+  );
 }
 
 
