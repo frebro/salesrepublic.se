@@ -17,7 +17,7 @@
   padding-right: var(--page-padding);
 }
 .tour.is-step-active .tour__map {
-  width: 50%;
+  width: 40%;
 }
 
 /* Map image and locations
@@ -220,7 +220,7 @@
   padding-right: 0;
 }
 .tour.is-step-active .tour__steps {
-  width: 50%;
+  width: 60%;
   padding-left: var(--page-padding);
   padding-right: var(--page-padding);
 }
@@ -230,8 +230,8 @@
   position: absolute;
   top: 0;
   right: var(--page-padding);
-  width: 48px;
-  height: 48px;
+  width: var(--page-padding);
+  height: var(--page-padding);
 
   text-indent: 100%;
 }
@@ -271,10 +271,10 @@
   position: absolute;
   top: 0;
   left: 100%;
-  width: 100%;
+  min-width: 100%;
   min-height: 100%;
   padding-left: var(--page-padding);
-  padding-right: var(--page-padding);
+  padding-right: calc(var(--page-padding) * 2);
 }
 .tour__step.is-active {
   left: 0;

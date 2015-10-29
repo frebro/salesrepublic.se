@@ -6,7 +6,7 @@
 
 
 /*
- * Card header
+ * Card headers
  */
 
 .card__header {
@@ -27,6 +27,15 @@
   width: 1em;
   height: 3px;
   background-color: color(black a(80%));
+}
+
+.card__subheader {
+  margin-top: 1em;
+  padding-bottom: .5em;
+  font-size: var(--rem-l);
+  font-family: var(--sans-family);
+  font-weight: var(--sans-bold);
+  line-height: 1.15;
 }
 
 

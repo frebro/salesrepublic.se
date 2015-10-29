@@ -14,6 +14,36 @@
 .font-l { font-size: var(--rem-l); }
 .font-xl { font-size: var(--rem-xl); }
 
+/* Checklist (apply to ul/ol) */
+.checklist {
+  font-family: var(--sans-family);
+  font-size: var(--rem-s);
+}
+.checklist:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.checklist li {
+  position: relative;
+  padding: .25em 0 .25em 1.6em;
+}
+.checklist li:before {
+  color: var(--color-blue);
+  content: '\2713\0020';
+  position: absolute;
+  top: .1em;
+  left: 0;
+  font-size: 1.2em;
+}
+.checklist li.checklist__header {
+  padding-left: 0;
+  font-weight: bold;
+}
+.checklist li.checklist__header:before {
+  content: '';
+}
+
 /* Magic underline */
 .magic-underline {
   text-decoration: none !important;
