@@ -11,19 +11,60 @@
 
 .tour__map { }
 
-// Map image and locations
-//
-.tour__map-canvas { }
-
-.tour__map-image { }
-
-.tour__map-button { }
-.tour__map-button.is-active {
-  background-color: salmon;
+/* Map image and locations
+*/
+.tour__map-canvas {
+  position: relative;
+  max-width: 1070px; /* Natural width of image */
+  margin-right: auto;
+  margin-left: auto;
 }
 
-// Map keys
-//
+/* Map image */
+.tour__map-canvas-image {
+  min-width: 100%;
+}
+
+/* Buttons on image */
+.tour__map-canvas-button {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  margin-top: -24px;
+  margin-left: -24px;
+
+  transition: all 90ms ease-out;
+
+  background-color: var(--color-yellow);
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 1px 2px 3px rgba(0,0,0,.05);
+
+  font-family: var(--sans-family);
+  font-weight: var(--sans-bold);
+  font-size: var(--rem-l);
+  line-height: 44px;
+}
+/* Button active state */
+.tour__map-canvas-button.is-active {
+  background-color: var(--color-orange);
+  width: 64px;
+  height: 64px;
+  margin-top: -32px;
+  margin-left: -32px;
+}
+/* Button positions */
+.tour__map-canvas-button[data-target="tour-1"] { top: 70%; left: 40%; /* 1. Försäljningsstrategi */ }
+.tour__map-canvas-button[data-target="tour-2"] { top: 60%; left: 20%; /* 2. Försäljningsprocesser */ }
+.tour__map-canvas-button[data-target="tour-3"] { top: 48%; left: 15%; /* 3. Kompetensutveckling */ }
+.tour__map-canvas-button[data-target="tour-4"] { top: 12%; left: 23%; /* 4. Säljrekrytering */ }
+.tour__map-canvas-button[data-target="tour-5"] { top: 24%; left: 44%; /* 5. Säljverktyg */ }
+.tour__map-canvas-button[data-target="tour-6"] { top: 33%; left: 65%; /* 6. Säljledning */ }
+.tour__map-canvas-button[data-target="tour-7"] { top: 40%; left: 86%; /* 7. Kundkommunikation */ }
+.tour__map-canvas-button[data-target="tour-8"] { top: 67%; left: 65%; /* 8. Coachning & Mentorskap */ }
+
+/* Map keys
+*/
 .tour__map-keys { }
 
 .tour__map-key { }
