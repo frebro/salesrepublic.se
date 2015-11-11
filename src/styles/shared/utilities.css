@@ -14,6 +14,29 @@
 .font-l { font-size: var(--rem-l); }
 .font-xl { font-size: var(--rem-xl); }
 
+/* Bulletlist (apply to ul/ol) */
+.bulletlist {
+  font-family: var(--sans-family);
+  font-size: var(--rem-s);
+}
+.bulletlist:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.bulletlist li {
+  position: relative;
+  padding: .25em 0 .25em 1.6em;
+}
+.bulletlist li:before {
+  color: var(--color-gray);
+  content: '\2022\0020';
+  position: absolute;
+  top: -.1em;
+  left: 0;
+  font-size: 150%;
+}
+
 /* Checklist (apply to ul/ol) */
 .checklist {
   font-family: var(--sans-family);
@@ -32,9 +55,9 @@
   color: var(--color-blue);
   content: '\2713\0020';
   position: absolute;
-  top: .1em;
+  top: .15em;
   left: 0;
-  font-size: 1.2em;
+  font-size: 120%;
 }
 .checklist li.checklist__header {
   padding-left: 0;
