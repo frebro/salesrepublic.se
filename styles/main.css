@@ -133,6 +133,30 @@ img {
 .font-l { font-size: 31px; font-size: 1.6315789474rem; }
 .font-xl { font-size: 50px; font-size: 2.6315789474rem; }
 
+/* Bulletlist (apply to ul/ol) */
+.bulletlist {
+  font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
+  font-size: 14px;
+  font-size: 0.75rem;
+}
+.bulletlist:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.bulletlist li {
+  position: relative;
+  padding: .25em 0 .25em 1.6em;
+}
+.bulletlist li:before {
+  color: #949A90;
+  content: '\2022\0020';
+  position: absolute;
+  top: -.1em;
+  left: 0;
+  font-size: 150%;
+}
+
 /* Checklist (apply to ul/ol) */
 .checklist {
   font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
@@ -152,9 +176,9 @@ img {
   color: #407EC9;
   content: '\2713\0020';
   position: absolute;
-  top: .1em;
+  top: .15em;
   left: 0;
-  font-size: 1.2em;
+  font-size: 120%;
 }
 .checklist li.checklist__header {
   padding-left: 0;
