@@ -52,7 +52,6 @@
      * Mouse Enter Location Control method
      */
     enterLocationControl: function(event) {
-      console.log('enterLocationControl');
       var $control = $(event.target);
       var stepId = $control.data('target');
 
@@ -64,7 +63,6 @@
      * Mouse Leave Location Control method
      */
     leaveLocationControl: function(event) {
-      console.log('leaveLocationControl');
       var $control = $(event.target);
       var stepId = $control.data('target');
 
@@ -76,7 +74,6 @@
      * Focus Location Control method
      */
     focusLocationControl: function(event) {
-      console.log('focusLocationControl');
       var $control = $(event.target);
       var stepId = $control.data('target');
       var $step = $('#' + stepId);
@@ -101,7 +98,6 @@
      * Blur Location Control method
      */
     blurLocationControl: function(event) {
-      console.log('blurLocationControl');
       var $control = $(event.target);
       var stepId = $control.data('target');
 
@@ -122,8 +118,6 @@
      * Set Tour to Inactive
      */
     setTourInactive: function() {
-
-      console.log('setTourInactive');
 
       // Remove class on container to signal that no steps are active
       this.$element.removeClass('is-step-active');
