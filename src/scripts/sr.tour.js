@@ -112,6 +112,9 @@
 
       // Set class on container to signal that a step is active
       this.$element.addClass('is-step-active');
+
+      // Ping Google Analytics
+      ga('send', 'event', 'Tour', 'show', stepId);
     },
 
     /**
