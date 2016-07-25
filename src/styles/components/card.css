@@ -15,7 +15,7 @@
   font-size: var(--rem-xl);
   font-family: var(--sans-family);
   font-weight: var(--sans-bold);
-  line-height: 1.15;
+  line-height: 1.25;
 }
 
 .card__header:before {
@@ -34,7 +34,7 @@
   font-size: var(--rem-l);
   font-family: var(--sans-family);
   font-weight: var(--sans-bold);
-  line-height: 1.15;
+  line-height: 1.25;
 }
 
 
@@ -90,14 +90,14 @@
   );
 }
 
-.card--yellow a,
-.card--yellow .card__header { color: var(--color-yellow); }
-.card--yellow .magic-underline {
+.card--green a,
+.card--green .card__header { color: var(--color-green); }
+.card--green .magic-underline {
   background-image: linear-gradient(to top,
-    color(var(--color-yellow) a(0%)) 12%,
-    color(var(--color-yellow) a(15%)) 12%,
-    color(var(--color-yellow) a(15%)) 17%,
-    color(var(--color-yellow) a(0%)) 17%
+    color(var(--color-green) a(0%)) 12%,
+    color(var(--color-green) a(15%)) 12%,
+    color(var(--color-green) a(15%)) 17%,
+    color(var(--color-green) a(0%)) 17%
   );
 }
 
