@@ -5,6 +5,7 @@
   color: white;
   background-size: cover;
   background-position: bottom center;
+  margin-top: var(--footer-margin);
 }
 
 .footer .brand {
