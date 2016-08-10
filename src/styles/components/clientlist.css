@@ -4,10 +4,16 @@
 }
 
 .clientlist__item {
-  display: inline-block;
+  display: block;
   margin: var(--content-padding-v) var(--content-padding-h);
 
   font-size: var(--rem-l);
   font-family: var(--sans-family);
   line-height: 1.25;
+}
+
+@media (min-width: 481px) {
+  .clientlist__item {
+    display: inline-block;
+  }
 }
