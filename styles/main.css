@@ -219,6 +219,8 @@ html.js .animate-in {
   background-position: bottom center;
 
   min-height: 100vh;
+  margin-bottom: 38px;
+  margin-bottom: 2rem;
 }
 
 /*
@@ -239,6 +241,8 @@ html.js .animate-in {
   color: white;
   background-size: cover;
   background-position: bottom center;
+  margin-top: 152px;
+  margin-top: 8rem;
 }
 
 .footer .brand {
@@ -402,7 +406,7 @@ html.js .animate-in {
   font-size: 2.6315789474rem;
   font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 1.25;
 }
 
 .card__header:before {
@@ -423,7 +427,7 @@ html.js .animate-in {
   font-size: 1.6315789474rem;
   font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 1.25;
 }
 
 
@@ -482,15 +486,15 @@ html.js .animate-in {
   );
 }
 
-.card--yellow a,
-.card--yellow .card__header { color: #FFCD00; }
-.card--yellow .magic-underline {
-  background-image: -webkit-linear-gradient(bottom, rgba(255, 205, 0, 0) 12%, rgba(255, 205, 0, 0.15) 12%, rgba(255, 205, 0, 0.15) 17%, rgba(255, 205, 0, 0) 17%);
+.card--green a,
+.card--green .card__header { color: #009933; }
+.card--green .magic-underline {
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 153, 51, 0) 12%, rgba(0, 153, 51, 0.15) 12%, rgba(0, 153, 51, 0.15) 17%, rgba(0, 153, 51, 0) 17%);
   background-image: linear-gradient(to top,
-    rgba(255, 205, 0, 0) 12%,
-    rgba(255, 205, 0, 0.15) 12%,
-    rgba(255, 205, 0, 0.15) 17%,
-    rgba(255, 205, 0, 0) 17%
+    rgba(0, 153, 51, 0) 12%,
+    rgba(0, 153, 51, 0.15) 12%,
+    rgba(0, 153, 51, 0.15) 17%,
+    rgba(0, 153, 51, 0) 17%
   );
 }
 
@@ -520,6 +524,23 @@ html.js .animate-in {
 .overlay.overlay--toolbar {
   top: 66px;
   top: 3.5rem;
+}
+.clientlist {
+  margin-right: -38px;
+  margin-right: -2rem;
+  margin-left: -38px;
+  margin-left: -2rem;
+}
+
+.clientlist__item {
+  display: inline-block;
+  margin: 28px 38px;
+  margin: 1.5rem 2rem;
+
+  font-size: 31px;
+  font-size: 1.6315789474rem;
+  font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
+  line-height: 1.25;
 }
 /**
  * Tour component
