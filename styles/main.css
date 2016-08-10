@@ -424,7 +424,8 @@ html.js .animate-in {
   margin-top: 1em;
   padding-bottom: .5em;
   font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
-  font-weight: 800;
+  /*font-weight: var(--sans-bold);*/
+  font-style: italic;
   line-height: 1.25;
 }
 
