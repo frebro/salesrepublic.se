@@ -32,7 +32,8 @@
   margin-top: 1em;
   padding-bottom: .5em;
   font-family: var(--sans-family);
-  font-weight: var(--sans-bold);
+  /*font-weight: var(--sans-bold);*/
+  font-style: italic;
   line-height: 1.25;
 }
 
