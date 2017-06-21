@@ -10,12 +10,11 @@
 
 * {
   box-sizing: border-box;
-  -webkit-transition: all .6s ease-in-out;
-          transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
 }
 
 html {
-  font: 300 118.75%/1.6 'Mercury SSm A', 'Mercury SSm B', serif;
+  font: 400 118.75%/1.6 'Cardo', serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -79,7 +78,7 @@ ol {
   margin-bottom: 1em;
 }
 strong {
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: -.02em;
 }
 small {
@@ -89,8 +88,7 @@ small {
 a,
 button {
   color: inherit;
-  -webkit-transition: 240ms;
-          transition: 240ms;
+  transition: 240ms;
 }
 a {
   text-decoration: none;
@@ -125,17 +123,17 @@ img {
 }
 
 /* Font helpers */
-.font-sans { font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif; }
-.font-sans strong { font-weight: 800; }
-.font-serif { font-family: 'Mercury SSm A', 'Mercury SSm B', serif; }
-.font-serif strong { font-weight: 500; }
+.font-sans { font-family: 'Source Sans Pro', sans-serif; }
+.font-sans strong { font-weight: 900; }
+.font-serif { font-family: 'Cardo', serif; }
+.font-serif strong { font-weight: 700; }
 .font-s { font-size: 14px; font-size: 0.75rem; }
 .font-l { font-size: 31px; font-size: 1.6315789474rem; }
 .font-xl { font-size: 50px; font-size: 2.6315789474rem; }
 
 /* Bulletlist (apply to ul/ol) */
 .bulletlist {
-  font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
   font-size: 0.75rem;
 }
@@ -159,7 +157,7 @@ img {
 
 /* Checklist (apply to ul/ol) */
 .checklist {
-  font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
   font-size: 0.75rem;
 }
@@ -192,7 +190,6 @@ img {
 .magic-underline {
   text-decoration: none !important;
   display: inline-block;
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0) 12%, rgba(0, 0, 0, 0.15) 12%, rgba(0, 0, 0, 0.15) 17%, rgba(0, 0, 0, 0) 17%);
   background-image: linear-gradient(to top,
     rgba(0, 0, 0, 0) 12%,
     rgba(0, 0, 0, 0.15) 12%,
@@ -204,14 +201,12 @@ img {
 /* Card animation */
 html.js .animate-in {
   -webkit-transform: translateY(40px);
-      -ms-transform: translateY(40px);
           transform: translateY(40px);
   opacity: 0;
 }
 
 .header {
   background-color: #949A90;
-  background-image: -webkit-linear-gradient(280deg, rgba(0, 153, 51, 0.1) 0%, rgba(33, 39, 33, 0.03) 50%, rgba(33, 39, 33, 0.1) 50%, rgba(64, 126, 201, 0.03) 100%), url('../images/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD-(1-of-1)-5.jpg');
   background-image: linear-gradient(170deg, rgba(0, 153, 51, 0.1) 0%, rgba(33, 39, 33, 0.03) 50%, rgba(33, 39, 33, 0.1) 50%, rgba(64, 126, 201, 0.03) 100%),
     url('../images/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD-(1-of-1)-5.jpg');
   color: white;
@@ -230,12 +225,11 @@ html.js .animate-in {
 .header .brand {
   width: 988px;
   width: 52rem;
-  max-width: 80%;
+  max-width: 65%;
   margin-top: 6vh;
 }
 .footer {
   background-color: #949A90;
-  background-image: -webkit-linear-gradient(260deg, rgba(0, 153, 51, 0.1) 0%, rgba(33, 39, 33, 0.03) 50%, rgba(33, 39, 33, 0.1) 50%, rgba(64, 126, 201, 0.03) 100%), url('../images/photo-1428908728789-d2de25dbd4e2.jpg');
   background-image: linear-gradient(190deg, rgba(0, 153, 51, 0.1) 0%, rgba(33, 39, 33, 0.03) 50%, rgba(33, 39, 33, 0.1) 50%, rgba(64, 126, 201, 0.03) 100%),
     url('../images/photo-1428908728789-d2de25dbd4e2.jpg');
   color: white;
@@ -253,7 +247,6 @@ html.js .animate-in {
 }
 
 .magic-underline {
-  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 12%, rgba(255, 255, 255, 0.3) 12%, rgba(255, 255, 255, 0.3) 15%, rgba(255, 255, 255, 0) 15%);
   background-image: linear-gradient(to top,
     rgba(255, 255, 255, 0) 12%,
     rgba(255, 255, 255, 0.3) 12%,
@@ -295,23 +288,20 @@ html.js .animate-in {
   margin-left: 10%;
   margin-bottom: 5%;
   opacity: 1;
-  -webkit-transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
-          transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
 }
 
 .brand__wordmark {
   vertical-align: middle;
   width: 100%;
   opacity: 1;
-  -webkit-transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
-          transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  transition: all 240ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
 }
 
 .brand .st0,
 .brand .st1,
 .brand .st2 {
-  -webkit-transition: fill 1.4s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-          transition: fill 1.4s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  transition: fill 1.4s cubic-bezier(0.645, 0.045, 0.355, 1.000);
 }
 
 
@@ -404,8 +394,8 @@ html.js .animate-in {
   padding-bottom: .5em;
   font-size: 31px;
   font-size: 1.6315789474rem;
-  font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
-  font-weight: 800;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
   line-height: 1.25;
 }
 
@@ -416,22 +406,21 @@ html.js .animate-in {
   left: 0;
   width: 1em;
   height: 3px;
-  background-color: #000000;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
 .card__subheader {
   margin-top: 1em;
   padding-bottom: .5em;
-  font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
-  /*font-weight: var(--sans-bold);*/
-  font-style: italic;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
   line-height: 1.25;
 }
 
 @media (min-width: 481px) {
   .card__header {
     font-size: 2.6315789474rem;
+    letter-spacing: -1.5px;
   }
   .card__subheader {
     font-size: 1.6315789474rem;
@@ -483,7 +472,6 @@ html.js .animate-in {
 .card--orange a,
 .card--orange .card__header { color: #E87722; }
 .card--orange .magic-underline {
-  background-image: -webkit-linear-gradient(bottom, rgba(232, 119, 34, 0) 12%, rgba(232, 119, 34, 0.15) 12%, rgba(232, 119, 34, 0.15) 17%, rgba(232, 119, 34, 0) 17%);
   background-image: linear-gradient(to top,
     rgba(232, 119, 34, 0) 12%,
     rgba(232, 119, 34, 0.15) 12%,
@@ -495,7 +483,6 @@ html.js .animate-in {
 .card--green a,
 .card--green .card__header { color: #009933; }
 .card--green .magic-underline {
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 153, 51, 0) 12%, rgba(0, 153, 51, 0.15) 12%, rgba(0, 153, 51, 0.15) 17%, rgba(0, 153, 51, 0) 17%);
   background-image: linear-gradient(to top,
     rgba(0, 153, 51, 0) 12%,
     rgba(0, 153, 51, 0.15) 12%,
@@ -507,7 +494,6 @@ html.js .animate-in {
 .card--blue a,
 .card--blue .card__header { color: #407EC9; }
 .card--blue .magic-underline {
-  background-image: -webkit-linear-gradient(bottom, rgba(64, 126, 201, 0) 12%, rgba(64, 126, 201, 0.15) 12%, rgba(64, 126, 201, 0.15) 17%, rgba(64, 126, 201, 0) 17%);
   background-image: linear-gradient(to top,
     rgba(64, 126, 201, 0) 12%,
     rgba(64, 126, 201, 0.15) 12%,
@@ -521,8 +507,6 @@ html.js .animate-in {
   right: 0;
   bottom: 0;
   left: 0;
-
-  background-color: #949A90;
 
   background-color: rgba(148, 154, 144, 0.6);
 }
@@ -545,8 +529,13 @@ html.js .animate-in {
 
   font-size: 31px;
   font-size: 1.6315789474rem;
-  font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
   line-height: 1.25;
+}
+
+.clientlist__item a:hover {
+  text-decoration: underline;
 }
 
 @media (min-width: 481px) {
@@ -601,9 +590,7 @@ html.js .animate-in {
   margin-top: -9px;
   margin-left: -9px;
 
-  -webkit-transition: all 90ms ease-out;
-
-          transition: all 90ms ease-out;
+  transition: all 90ms ease-out;
 
   background-color: #FFCD00;
   border: 2px solid #212721;
@@ -612,8 +599,8 @@ html.js .animate-in {
 
   font-size: 14px;
   font-size: 0.75rem;
-  font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
-  font-weight: 800;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
   line-height: 1em;
 }
 /* Button active state */
@@ -725,8 +712,8 @@ html.js .animate-in {
   background-color: #FFCD00;
   border-radius: 50%;
 
-  font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
-  font-weight: 800;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
   line-height: 1.6em;
   text-align: center;
 }
@@ -756,7 +743,6 @@ html.js .animate-in {
 .tour__map-key-button.is-active,
 .tour__map-key-button:focus {
   outline: none;
-  background-image: -webkit-linear-gradient(bottom, rgba(255, 205, 0, 0) 12%, rgb(255, 205, 0) 12%, rgb(255, 205, 0) 17%, rgba(255, 205, 0, 0) 17%);
   background-image: linear-gradient(to top,
     rgba(255, 205, 0, 0) 12%,
     rgb(255, 205, 0) 12%,
@@ -813,18 +799,14 @@ html.js .animate-in {
   top: 50%;
   left: 0;
 
-  -webkit-transition: background-color 120ms linear;
-
-          transition: background-color 120ms linear;
+  transition: background-color 120ms linear;
 }
 .tour__steps-close-button:before {
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 .tour__steps-close-button:after {
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 .tour__steps-close-button:focus {
