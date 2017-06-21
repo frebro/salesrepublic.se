@@ -32,14 +32,14 @@
   margin-top: 1em;
   padding-bottom: .5em;
   font-family: var(--sans-family);
-  /*font-weight: var(--sans-bold);*/
-  font-style: italic;
+  font-weight: var(--sans-bold);
   line-height: 1.25;
 }
 
 @media (min-width: 481px) {
   .card__header {
     font-size: var(--rem-xl);
+    letter-spacing: -1.5px;
   }
   .card__subheader {
     font-size: var(--rem-l);

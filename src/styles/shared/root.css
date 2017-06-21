@@ -20,13 +20,13 @@
   --rem-xl:             2.6315789474rem;  /* ~50px @19 / ~42px @16 */
 
 
-  --sans-family:  'Whitney SSm A', 'Whitney SSm B', sans-serif;
+  --sans-family:  'Source Sans Pro', sans-serif;
   --sans-weight:  400;
-  --sans-bold:    800;
+  --sans-bold:    900;
 
-  --serif-family:   'Mercury SSm A', 'Mercury SSm B', serif;
-  --serif-weight:   300;
-  --serif-bold:     500;
+  --serif-family:   'Cardo', serif;
+  --serif-weight:   400;
+  --serif-bold:     700;
 
 
   --page-padding:       2rem;

@@ -9,7 +9,12 @@
 
   font-size: var(--rem-l);
   font-family: var(--sans-family);
+  font-weight: var(--sans-bold);
   line-height: 1.25;
+}
+
+.clientlist__item a:hover {
+  text-decoration: underline;
 }
 
 @media (min-width: 481px) {
