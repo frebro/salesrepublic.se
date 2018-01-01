@@ -10,7 +10,7 @@
 
 .card__header {
   position: relative;
-  margin-top: 1em;
+  margin-top: 0.75em;
   padding-bottom: .5em;
   font-size: var(--rem-l);
   font-family: var(--sans-family);
@@ -23,9 +23,9 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 1em;
-  height: 3px;
-  background-color: color(black a(80%));
+  width: 25%;
+  height: 2px;
+  background-color: var(--body-color);
 }
 
 .card__subheader {
@@ -88,6 +88,7 @@
 
 .card--orange a,
 .card--orange .card__header { color: var(--color-orange); }
+.card--orange .card__header:before { background-color: var(--color-orange); }
 .card--orange .magic-underline {
   background-image: linear-gradient(to top,
     color(var(--color-orange) a(0%)) 12%,
@@ -99,6 +100,7 @@
 
 .card--green a,
 .card--green .card__header { color: var(--color-green); }
+.card--green .card__header:before { background-color: var(--color-green); }
 .card--green .magic-underline {
   background-image: linear-gradient(to top,
     color(var(--color-green) a(0%)) 12%,
@@ -110,6 +112,7 @@
 
 .card--blue a,
 .card--blue .card__header { color: var(--color-blue); }
+.card--blue .card__header:before { background-color: var(--color-blue); }
 .card--blue .magic-underline {
   background-image: linear-gradient(to top,
     color(var(--color-blue) a(0%)) 12%,
