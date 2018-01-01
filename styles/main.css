@@ -225,8 +225,8 @@ html.js .animate-in {
 .header .brand {
   width: 988px;
   width: 52rem;
-  max-width: 65%;
-  margin-top: 6vh;
+  max-width: 55%;
+  margin-top: 5vh;
 }
 .footer {
   background-color: #949A90;
@@ -390,7 +390,7 @@ html.js .animate-in {
 
 .card__header {
   position: relative;
-  margin-top: 1em;
+  margin-top: 0.75em;
   padding-bottom: .5em;
   font-size: 31px;
   font-size: 1.6315789474rem;
@@ -404,9 +404,9 @@ html.js .animate-in {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 1em;
-  height: 3px;
-  background-color: rgba(0, 0, 0, 0.8);
+  width: 25%;
+  height: 2px;
+  background-color: #212721;
 }
 
 .card__subheader {
@@ -471,6 +471,7 @@ html.js .animate-in {
 
 .card--orange a,
 .card--orange .card__header { color: #E87722; }
+.card--orange .card__header:before { background-color: #E87722; }
 .card--orange .magic-underline {
   background-image: linear-gradient(to top,
     rgba(232, 119, 34, 0) 12%,
@@ -482,6 +483,7 @@ html.js .animate-in {
 
 .card--green a,
 .card--green .card__header { color: #009933; }
+.card--green .card__header:before { background-color: #009933; }
 .card--green .magic-underline {
   background-image: linear-gradient(to top,
     rgba(0, 153, 51, 0) 12%,
@@ -493,6 +495,7 @@ html.js .animate-in {
 
 .card--blue a,
 .card--blue .card__header { color: #407EC9; }
+.card--blue .card__header:before { background-color: #407EC9; }
 .card--blue .magic-underline {
   background-image: linear-gradient(to top,
     rgba(64, 126, 201, 0) 12%,
