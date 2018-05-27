@@ -3,13 +3,13 @@
 ### Install
 
 ```
-npm install
+yarn
 ```
 
 ### Build
 
 ```
-gulp build
+yarn <build></build>
 ```
 
 ### Deploy

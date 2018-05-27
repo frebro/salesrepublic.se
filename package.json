@@ -12,12 +12,8 @@
     "url": "https://github.com/synackdigital/salesrepublis.se/issues"
   },
   "license": "ISC",
-  "engines": {
-    "node": "0.10.36",
-    "npm": "2.3.0"
-  },
   "scripts": {
-    "test": "gulp build:production"
+    "build": "./node_modules/.bin/gulp build"
   },
   "devDependencies": {
     "asset-builder": "^1.1.0",
