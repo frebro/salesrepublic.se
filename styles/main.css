@@ -200,8 +200,7 @@ img {
 
 /* Card animation */
 html.js .animate-in {
-  -webkit-transform: translateY(40px);
-          transform: translateY(40px);
+  transform: translateY(40px);
   opacity: 0;
 }
 
@@ -805,12 +804,10 @@ html.js .animate-in {
   transition: background-color 120ms linear;
 }
 .tour__steps-close-button:before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .tour__steps-close-button:after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 .tour__steps-close-button:focus {
   outline: none;
